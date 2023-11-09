@@ -1,0 +1,33 @@
+<!-- Calculator Body -->
+<div class="calc-body">
+
+  <!-- Calculator Display Screen -->
+  <div class="calc-screen">
+    <div id="calc-operation">{{result}}</div>
+      <div id="calc-typed">{{res}}</div>
+  </div>
+
+  <!-- Calculator Buttons -->
+  <div class="calc-button-row">
+    <button (click)="getAction(item)" *ngFor="let item of [7 , 8 , 9]">{{item}}</button>
+
+    <button class="opt" (click)="getAction('/')">&#247;</button>
+
+    <button (click)="getAction(item)" *ngFor="let item of [4 , 5 , 6]">{{item}}</button>
+
+    <button class="opt" (click)="getAction('*')">&#215;</button>
+
+    <button (click)="getAction(item)" *ngFor="let item of [1 , 2 , 3]">{{item}}</button>
+
+    <button class="opt" (click)="getAction('-')">&#8722;</button>
+
+    <button class="ac" (click)="reset()">AC</button>
+
+    <button (click)="getAction(0)">0</button>
+
+    <button class="opt" (click)="equal()">&#61;</button>
+
+    <button class="opt" (click)="getAction('+')">&#43;</button>
+  </div>
+</div>
+
